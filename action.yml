@@ -1,0 +1,5 @@
+name: 'Install Sonar Build Wrapper'
+description: ''
+runs:
+  using: 'node12'
+  main: 'index.js'
