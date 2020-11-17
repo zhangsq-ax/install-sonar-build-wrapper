@@ -14,7 +14,7 @@ const exec = require("@actions/exec");
     await exec.exec("sudo mv build-wrapper-linux-x86/libinterceptor-x86_64.so /usr/local/bin/");
     // await exec.exec("mkdir build");
     // await exec.exec("cd build");
-    await exec.exec("make -DCMAKE_BUILD_TYPE=Debug ./");
+    await exec.exec("cmake -DCMAKE_BUILD_TYPE=Debug ./");
     await exec.exec("build-wrapper-linux-x86-64 --out-dir bw_output make");
     await exec.exec("cd ..");
     // await exec.exec("build-wrapper-linux-x86-64 --out-dir bw_output ./build.sh");
