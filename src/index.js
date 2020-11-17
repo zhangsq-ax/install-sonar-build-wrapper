@@ -12,8 +12,13 @@ const exec = require("@actions/exec");
     await exec.exec("sudo mv build-wrapper-linux-x86/libinterceptor-haswell.so /usr/local/bin/");
     await exec.exec("sudo mv build-wrapper-linux-x86/libinterceptor-i686.so /usr/local/bin/");
     await exec.exec("sudo mv build-wrapper-linux-x86/libinterceptor-x86_64.so /usr/local/bin/");
-    await exec.exec("build-wrapper-linux-x86-64 --out-dir bw_output ./build.sh");
+    await exec.exec("mkdir build");
+    await exec.exec("cd build");
+    await exec.exec("make -DCMAKE_BUILD_TYPE=Debug ../");
+    await exec.exec("build-wrapper-linux-x86-64 --out-dir ../bw_output make");
+    await exec.exec("cd ..");
+    // await exec.exec("build-wrapper-linux-x86-64 --out-dir bw_output ./build.sh");
     await exec.exec("ls -lh");
     await exec.exec("ls -lh bw_output");
-    await exec.exec("cat bw_output/build-wrapper-dump.json");
+    // await exec.exec("cat bw_output/build-wrapper-dump.json");
 })()
