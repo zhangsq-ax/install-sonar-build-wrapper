@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "npx ncc build src/index.js -o ./ --license license.txt",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
