@@ -1179,7 +1179,7 @@ const exec = __webpack_require__(514);
     // await exec.exec("mkdir build");
     // await exec.exec("cd build");
     await exec.exec("cmake -DCMAKE_BUILD_TYPE=Debug ./");
-    await exec.exec("build-wrapper-linux-x86-64 --out-dir bw_output make");
+    await exec.exec("build-wrapper-linux-x86-64 --out-dir bw_output make clean all");
     await exec.exec("cd ..");
     // await exec.exec("build-wrapper-linux-x86-64 --out-dir bw_output ./build.sh");
     await exec.exec("ls -lh");
