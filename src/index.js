@@ -15,4 +15,5 @@ const exec = require("@actions/exec");
     await exec.exec("build-wrapper-linux-x86-64 --out-dir bw_output ./build.sh");
     await exec.exec("ls -lh");
     await exec.exec("ls -lh bw_output");
+    await exec.exec("cat bw_output/build-wrapper-dump.json");
 })()
