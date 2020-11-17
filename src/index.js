@@ -7,6 +7,7 @@ const exec = require("@actions/exec");
     await exec.exec("wget https://sonarcloud.io/static/cpp/build-wrapper-linux-x86.zip");
     await exec.exec("unzip build-wrapper-linux-x86.zip");
     await exec.exec("ls -lh");
+    await exec.exec("ls -lh build-wrapper-linux-x86")
     await exec.exec("mv build-wrapper-linux-x86/* /usr/local/bin/");
-    await exec.extc("build-wrapper-linux-x86")
+    await exec.extc("build-wrapper-linux-x86-64")
 })()
