@@ -2,7 +2,7 @@
   "name": "install-sonar-build-wrapper",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,8 +18,9 @@
   },
   "homepage": "https://github.com/zhangsq-ax/install-sonar-build-wrapper#readme",
   "dependencies": {
-    "@actions/core": "^1.2.6",
-    "@actions/exec": "^1.0.4",
-    "@actions/github": "^4.0.0"
+    "@actions/exec": "^1.0.4"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.25.1"
   }
 }
